@@ -37,7 +37,7 @@ const Signup = () => {
       </div>
       <div className='p-8 w-2/4 h-screen flex flex-col items-center'>
         <div className='w-full pb-10'>
-          <img src="./images/logo.png" className='w-20 h-20' alt="" />
+          <img src="/src/assets/logo-87.svg" className='w-3/12 h-20' alt="" />
         </div>
         <h1 className='mb-16 font-sans font-semibold text-4xl cursor-default text-black'>Get Started Now</h1>
         <Form className='flex flex-col w-2/4 px-5'>
