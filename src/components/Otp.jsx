@@ -6,6 +6,7 @@ import testSvg from '/src/assets/Menu.svg'
 import testSvg1 from '/src/assets/Menu(1).svg'
 import testSvg2 from '/src/assets/Menu(2).svg'
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 const { Link, Text } = Typography;
@@ -21,6 +22,29 @@ const Otp = () => {
   const homePage = () => {
     navigate('/');
   }
+
+  // usestate for timer
+  const [timeLeft, setTimeLeft] = useState(99);
+
+  useEffect(() => {
+    // Exit if the countdown is complete
+    if (timeLeft <= 0) return;
+
+    // Set up the interval to decrement the timer
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => prev - 1);
+    }, 1000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(timer);
+  }, [timeLeft]);
+
+  // Convert seconds to minutes:seconds format
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const secs = seconds % 60;
+    return `${minutes}:${secs < 10 ? "0" : ""}${secs}`;
+  };
 
   return (
     <div className='h-screen w-full flex'>
@@ -43,7 +67,12 @@ const Otp = () => {
           <div className='flex flex-col gap-5 w-3/6 '>
             <Input.OTP length={6} size='large' />
             <Button type='primary' size='large' onClick={handleRedirect} className='!bg-red-500 hover:!bg-red-600'>Verify</Button>
-            <p className='text-black'>Wait 1:39 seconds before requesting a new code.</p>
+            <p className="text-black">
+              {timeLeft > 0 ?
+                `Wait ${formatTime(timeLeft)} seconds before requesting a new code.` :
+                <a href="#" className="text-blue-500">You can now request a new code!</a>
+              }
+            </p>
           </div>
         </Form>
         <div className='pl-12 h-4/5 flex items-end justify-center  pb-10 w-100'>
