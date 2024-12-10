@@ -25,8 +25,8 @@ const Otp = () => {
   return (
     <div className='h-screen w-full flex'>
       <div className='bg-custom-gradient w-2/4 h-screen flex flex-col p-10 gap-5'>
-        <Button type='text' size='large' className='text-white font-semibold w-1/6' onClick={homePage} icon={<ArrowLeftOutlined style={{ color: 'white' }} />}>Back</Button>
-        <h1 className='mt-20 text-white tracking-wide font-bold text-center text-4xl cursor-default'>Layout Cards</h1>
+        <Button type='text' size='large' className='text-white-main font-semibold w-1/6' onClick={homePage} icon={<ArrowLeftOutlined style={{ color: 'white' }} />}>Back</Button>
+        <h1 className='mt-20 text-white-main tracking-wide font-bold text-center text-4xl cursor-default'>Layout Cards</h1>
         <div className='w-full  p-5 flex justify-center items-center box-border'>
           <Image src={testSvg} className='rounded-lg'></Image>
         </div>

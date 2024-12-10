@@ -8,6 +8,10 @@ export default {
     extend: {
       colors: {
         black: '#000000E0',
+        white: {
+        'primary':'#FAFAFA',
+        'main': '#FFFFFF',
+        },
         red: {
           50: '#fff1f0',  // Lightest shade of black (near white)
           100: '#ffccc7',
