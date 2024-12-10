@@ -4,7 +4,6 @@ import 'antd/dist/reset.css';
 import { Button, Input, Form, Checkbox } from 'antd';
 import { useNavigate  } from 'react-router-dom';
 import { useState } from 'react';
-import Password from 'antd/es/input/Password';
 
 const Signup = () => {
 
