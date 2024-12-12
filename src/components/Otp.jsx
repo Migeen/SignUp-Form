@@ -7,6 +7,7 @@ import testSvg1 from '/src/assets/Menu(1).svg'
 import testSvg2 from '/src/assets/Menu(2).svg'
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import logo from '/src/assets/logo-87.svg';
 
 
 const { Link, Text } = Typography;
@@ -60,7 +61,7 @@ const Otp = () => {
         </div>
       </div>
       <div className='w-2/4 h-screen flex flex-col p-10 gap-5'>
-        <img src="/src/assets/logo-87.svg" className='w-3/12 mt-8 ml-5' alt="" />
+        <img src={logo} className='w-3/12 mt-8 ml-5' alt="" />
         <Form className='mt-20  w-100 h-auto  flex flex-col gap-4  items-center'>
           <h1 className='text-5xl font-extrabold ' >Verify your Email</h1>
           <Text>Please enter the 6 digit code we just sent to m*********@gmail.com</Text>

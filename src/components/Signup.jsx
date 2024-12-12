@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import bgImage from '/images/Marketing-amico.png'
 
+import logo from '/src/assets/logo-87.svg';
+
 const Signup = () => {
 
   const navigate = useNavigate();
@@ -37,7 +39,7 @@ const Signup = () => {
       </div>
       <div className='p-8 w-2/4 h-screen flex flex-col items-center'>
         <div className='w-full pb-10'>
-          <img src="/src/assets/logo-87.svg" className='w-3/12 mt-8 ml-5' alt="" />
+          <img src={logo} className='w-3/12 mt-8 ml-5' alt="" />
         </div>
         <h1 className='mb-16 font-sans font-semibold text-4xl cursor-default text-black'>Get Started Now</h1>
         <Form className='flex flex-col w-2/4 px-5'>
