@@ -64,7 +64,7 @@ const item = [
 const items = [
   {
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+      <a target="_blank" rel="noopener noreferrer" href="#">
         1st menu item
       </a>
     ),
@@ -72,7 +72,7 @@ const items = [
   },
   {
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <a href="#">
         2nd menu item
       </a>
     ),
@@ -80,7 +80,7 @@ const items = [
   },
   {
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <a target="_blank" rel="noopener noreferrer" href="#">
         3rd menu item
       </a>
     ),

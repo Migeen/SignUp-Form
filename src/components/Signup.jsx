@@ -35,7 +35,7 @@ const Signup = () => {
   return (
     <div className='w-full h-screen flex'>
       <div className='w-2/4 h-screen bg-red-600'>
-        <Image src={bgImage} alt="" />
+        <img src={bgImage} alt="" />
       </div>
       <div className='p-8 w-2/4 h-screen flex flex-col items-center'>
         <div className='w-full pb-10'>
